@@ -16,7 +16,7 @@
 			<a href="<?php echo esc_url( __( 'http://wordpress.org/', 'sosimple' ) ); ?>"><?php printf( esc_html__( 'Proudly powered by %s', 'sosimple' ), 'WordPress' ); ?></a>
 			<span class="sep"> | </span>
 			<?php $sosimple_theme = wp_get_theme(); ?>
-			<?php printf( esc_html__( 'Theme: %1$s by %2$s.', 'sosimple' ), 'sosimple', '<a href="'.$sosimple_theme->get( 'AuthorURI' ).'" rel="designer">Fernando Villamor Jr.</a>' ); ?>
+			<?php printf( esc_html__( 'Theme: %1$s by %2$s.', 'sosimple' ), $sosimple_theme->name, '<a href="'.$sosimple_theme->get( 'AuthorURI' ).'" rel="designer">'.$sosimple_theme->get('Author').'</a>' ); ?>
 		</div><!-- .site-info -->
 	</footer><!-- #colophon -->
 </div><!-- #page -->

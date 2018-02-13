@@ -1,17 +1,20 @@
 /*
-Theme Name: SoSimple
-Theme URI: https://wordpress.org/themes/sosimple/
-Author: fernando villamor jr
-Author URI: http://fernandovillamorjr.com
+Theme Name: XavSimple
+Theme URI: https://wordpress.org/themes/xavsimple/
+Author: Xavier Lüthi
+Author URI: http://www.luthi.be
 Description: A clean, responsive simple theme for simple websites.
-Version: 1.2.7
+Version: 1.0
 License: GNU General Public License v2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
-Text Domain: sosimple
+Text Domain: Xavsimple
 Tags: custom-background, custom-header, custom-menu, flexible-header, editor-style, post-formats, one-column, two-columns, right-sidebar, full-width-template, translation-ready
 
 This theme, like WordPress, is licensed under the GPL.
 Use it to make something cool, have fun, and share what you've learned with others.
+
+XavSimple is based on sosimple from Fernando Villamor Jr http://fernandovillamorjr.com, 
+distributed under the term of the GNU GPL v2 or later.
 
 SoSimple is based on Underscores http://underscores.me/, (C) 2012-2015 Automattic, Inc.
 Underscores is distributed under the terms of the GNU GPL v2 or later.
@@ -168,6 +171,7 @@ a:focus {
 a:hover,
 a:active {
     outline: 0;
+    text-decoration: underline;
 }
 
 a img {
@@ -263,15 +267,17 @@ address {
 }
 
 pre {
-    font-family: 'Courier 10 Pitch', Courier, monospace;
-    font-size: .9375em;
-    line-height: 1.6em;
+    display:block;
+    font-family: 'Courier 10 Pitch', "Courier New", Courier, monospace;
+    font-size: 14em;
+    line-height: 1.43em;
     overflow: auto;
     max-width: 100%;
-    margin-top: -2px;
-    margin-bottom: 24px;
-    padding: 24px;
-    background: rgba(119, 119, 119, .5);
+    margin: 0 0 10.5px;
+    padding: 10px;
+    background: #f5f5f5;
+    color: #333333;
+    border: 1px solid #cccccc;
 }
 
 code,
@@ -852,26 +858,21 @@ address {
     margin-bottom: 27px;
 }
 
-pre {
-	background: transparent;
-	color: #666;
-	font-family: "Open Sans", Georgia, Times, serif;
-    font-size: 15px;
-    font-weight: 300;
-    line-height: 27px;
-    overflow: auto;
-    max-width: 100%;
-    margin-bottom: 27px;
-    padding: 0;
-}
-
 code,
 kbd,
 tt,
 var {
     font: 14px Monaco, Consolas, 'Andale Mono', 'DejaVu Sans Mono', monospace;
-    font-size: 1em;
-    line-height: 2.09231em;
+    font-size: 90%;
+    padding: 2px 4px;
+    color: #c7254e;
+    background-color: #f9f2f4;
+}
+
+pre code {
+    padding: 0;
+    color: inherit;
+    background-color: transparent;
 }
 
 abbr,
@@ -1954,7 +1955,6 @@ div.sharedaddy div.sd-block {
 
     .entry-title {
         font-size: 32px;
-        text-transform: capitalize;
     }
 
     .content-area {
