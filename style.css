@@ -215,7 +215,7 @@ h6 {
 }
 
 /* Text elements */
-p {
+p, div.row{
     margin-bottom: 24px;
 }
 
@@ -268,8 +268,7 @@ address {
 
 pre {
     display:block;
-    font-family: 'Courier 10 Pitch', "Courier New", Courier, monospace;
-    font-size: 14em;
+    font-family: Consolas, monaco, Courier, monospace;
     line-height: 1.43em;
     overflow: auto;
     max-width: 100%;
@@ -284,7 +283,7 @@ code,
 kbd,
 tt,
 var {
-    font-family: Monaco, Consolas, 'Andale Mono', 'DejaVu Sans Mono', monospace;
+    font-family: Consolas, monaco, Courier, monospace;
     font-size: .875em;
     line-height: 1.71429em;
 }
@@ -862,8 +861,8 @@ code,
 kbd,
 tt,
 var {
-    font: 14px Monaco, Consolas, 'Andale Mono', 'DejaVu Sans Mono', monospace;
-    font-size: 90%;
+    font-family: Consolas, monaco, Courier, monospace;
+    font-size: 80%;
     padding: 2px 4px;
     color: #c7254e;
     background-color: #f9f2f4;
@@ -1154,7 +1153,6 @@ a:active {
     margin-bottom: 0;
 }
 
-.byline,
 .updated {
     display: none;
 }
@@ -2123,4 +2121,14 @@ div.sharedaddy div.sd-block {
 
 a.more-link{
     display: block;
+}
+
+.col-sm-3, .col-sm-9 {
+	float: left;
+}
+.col-sm-3 {
+	width: 25%;
+}
+.col-sm-9 {
+	width: 75%;
 }

@@ -13,10 +13,9 @@
 
 	<footer id="colophon" class="site-footer" role="contentinfo">
 		<div class="site-info">
-			<a href="<?php echo esc_url( __( 'http://wordpress.org/', 'sosimple' ) ); ?>"><?php printf( esc_html__( 'Proudly powered by %s', 'sosimple' ), 'WordPress' ); ?></a>
-			<span class="sep"> | </span>
-			<?php $sosimple_theme = wp_get_theme(); ?>
-			<?php printf( esc_html__( 'Theme: %1$s by %2$s.', 'sosimple' ), $sosimple_theme->name, '<a href="'.$sosimple_theme->get( 'AuthorURI' ).'" rel="designer">'.$sosimple_theme->get('Author').'</a>' ); ?>
+		  &copy; <?php echo date("Y"); ?> &mdash; <a href="<?php echo home_url(); ?>"><?php bloginfo('name'); ?></a>.  
+		  <span class="sep"> | </span>
+		  <a href="<?php echo esc_url( get_permalink( get_page_by_title( 'Licence' ) ) ); ?>">Tout le contenu est sous licence Creative Commons BY-NC-SA</a>
 		</div><!-- .site-info -->
 	</footer><!-- #colophon -->
 </div><!-- #page -->
