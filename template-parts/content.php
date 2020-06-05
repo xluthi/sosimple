@@ -50,10 +50,10 @@
 		elseif( esc_attr(get_theme_mod( 'ss_more_type' ) == 'option3' )){
 			
 			if ( esc_attr(get_theme_mod( 'ss_more_button' ) == 'option1' )) {
-				the_content("<span class='ss_button ss_fill ss_squared'"."style='margin-top: 30px; padding:4px 8px; background-color:".esc_attr(get_theme_mod( 'ss_button_bg' ))."; "."color:".esc_attr(get_theme_mod( 'ss_text_color' ))."; "."float:".$ss_more_position.";'>".$ss_more_text."</div>");
+				the_content("<span class='ss_button ss_fill ss_squared'"."style='margin-top: -20px; margin-bottom: 20px; padding:4px 8px; background-color:".esc_attr(get_theme_mod( 'ss_button_bg' ))."; "."color:".esc_attr(get_theme_mod( 'ss_text_color' ))."; "."float:".$ss_more_position.";'>".$ss_more_text."</div>");
 			}
 			else{
-				the_content("<span class='ss_button ss_fill ss_rounded'"."style='margin-top: 30px; padding:4px 8px; background-color:".esc_attr(get_theme_mod( 'ss_button_bg' ))."; "."color:".esc_attr(get_theme_mod( 'ss_text_color' ))."; "."float:".$ss_more_position.";'>".$ss_more_text."</div>");
+				the_content("<span class='ss_button ss_fill ss_rounded'"."style='margin-top: -20px; margin-bottom: 20px; padding:4px 8px; background-color:".esc_attr(get_theme_mod( 'ss_button_bg' ))."; "."color:".esc_attr(get_theme_mod( 'ss_text_color' ))."; "."float:".$ss_more_position.";'>".$ss_more_text."</div>");
 			}
 			
 		}

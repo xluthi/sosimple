@@ -71,15 +71,17 @@ if ( ! function_exists( 'sosimple_posted_on' ) ) :
  */
 function sosimple_posted_on() {
 	$time_string = '<time class="entry-date published updated" datetime="%1$s">%2$s</time>';
-	if ( get_the_time( 'U' ) !== get_the_modified_time( 'U' ) ) {
-		$time_string = '<time class="entry-date published" datetime="%1$s">%2$s</time><time class="updated" datetime="%3$s">%4$s</time>';
+	if ( get_the_time( 'dmY' ) !== get_the_modified_time( 'dmY' ) ) {
+		$updated_string = '<time class="updated" datetime="%1$s">%2$s</time>';
+		$updated_string = sprintf( $updated_string,
+			esc_attr( get_the_modified_date( 'c' ) ),
+			esc_html( get_the_modified_date() )
+		);
 	}
 
 	$time_string = sprintf( $time_string,
 		esc_attr( get_the_date( 'c' ) ),
-		esc_html( get_the_date() ),
-		esc_attr( get_the_modified_date( 'c' ) ),
-		esc_html( get_the_modified_date() )
+		esc_html( get_the_date() )
 	);
 
 	$posted_on = sprintf(
@@ -87,12 +89,22 @@ function sosimple_posted_on() {
 		'<a href="' . esc_url( get_permalink() ) . '" rel="bookmark">' . $time_string . '</a>'
 	);
 
+	if ($updated_string) {
+		$updated_on = sprintf(
+			esc_html_x( 'updated on %s', 'post update', 'xavsimple'), $updated_string
+		);		
+	}
+
 	$byline = sprintf(
 		esc_html_x( 'by %s', 'post author', 'sosimple' ),
 		'<span class="author vcard"><a class="url fn n" href="' . esc_url( get_author_posts_url( get_the_author_meta( 'ID' ) ) ) . '">' . esc_html( get_the_author() ) . '</a></span>'
 	);
 
-	echo '<span class="posted-on">' . $posted_on . '</span><span class="byline"> ' . $byline . '</span>'; // WPCS: XSS OK.
+	echo '<span class="posted-on">' . $posted_on . '</span>';
+	if ($updated_on) {
+		echo ' <span class="updated-on">(' . $updated_on . ')</span>';
+	}	
+	echo '<span class="byline"> ' . $byline . '</span>'; // WPCS: XSS OK.
 
 }
 endif;

@@ -7,7 +7,7 @@ Description: A clean, responsive simple theme for simple websites.
 Version: 1.0
 License: GNU General Public License v2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
-Text Domain: Xavsimple
+Text Domain: xavsimple
 Tags: custom-background, custom-header, custom-menu, flexible-header, editor-style, post-formats, one-column, two-columns, right-sidebar, full-width-template, translation-ready
 
 This theme, like WordPress, is licensed under the GPL.
@@ -1153,10 +1153,6 @@ a:active {
     margin-bottom: 0;
 }
 
-.updated {
-    display: none;
-}
-
 .single .byline,
 .group-blog .byline {
     display: inline;
@@ -1446,6 +1442,11 @@ object {
 }
 
 /* =Comments */
+
+.comments-link {
+	display: block;
+	clear: both;
+}
 
 .comments-area {
     margin: 24px auto 0;
